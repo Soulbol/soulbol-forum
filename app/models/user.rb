@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def user_display_name
-    name.presence || email
+    name.presence || email&.split('@')&.first
   end
 end
