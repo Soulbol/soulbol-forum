@@ -1,0 +1,170 @@
+// Import Thredded's base styles
+@import 'thredded/base';
+
+// Custom variables
+$primary-color: #B00100; // Red color from soulbol.com
+$secondary-color: #730E15; // Darker red for accents
+$text-color: #2E2F30;
+$background-color: #EFEFEF;
+$border-color: #CCC;
+
+// Override Thredded's default styles
+.thredded {
+  // Header
+  &--header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem 0;
+
+    &-title a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  // Navigation
+  &--navigation {
+    margin-top: 1rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1rem;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Main content
+  &--main {
+    background-color: $background-color;
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  // Container
+  &--container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  // Topics and posts
+  &--topic {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    &-title {
+      color: $primary-color;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &--post {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    &-content {
+      color: $text-color;
+      line-height: 1.6;
+    }
+  }
+
+  // Buttons
+  &--button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  // Forms
+  &--form {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Footer
+  &--footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  // Icons
+  svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+
+  // Icon containers
+  .thredded--topic-locked-icon,
+  .thredded--topic-followed-icon,
+  .thredded--topic-unfollow-icon,
+  .thredded--posts-icon {
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.25rem;
+    }
+  }
+
+  // User avatars
+  img.thredded--user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .thredded {
+    &--container {
+      padding: 0 0.5rem;
+    }
+
+    &--header {
+      padding: 0.5rem 0;
+
+      &-title {
+        font-size: 1.2rem;
+      }
+    }
+
+    // Adjust icon sizes for mobile
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+} 

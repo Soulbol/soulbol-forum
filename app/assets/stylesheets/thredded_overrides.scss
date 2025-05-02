@@ -1,0 +1,43 @@
+.thredded {
+  // Fix icon sizes globally
+  .thredded--icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  // Fix specific icon instances
+  .thredded--topic-locked-icon svg,
+  .thredded--topic-followed-icon svg,
+  .thredded--topic-unfollow-icon svg,
+  .thredded--posts-icon svg,
+  .thredded--moderation-icon svg,
+  .thredded--follow-icon svg,
+  .thredded--unfollow-icon svg,
+  .thredded--private-topics--icon svg,
+  .thredded--messageboard--title svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  // Fix navigation icons
+  .thredded--navigation svg,
+  .thredded--user-navigation svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  // Fix button icons
+  .thredded--button svg {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+  }
+
+  // Fix user avatars
+  .thredded--post--avatar img {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50%;
+  }
+} 

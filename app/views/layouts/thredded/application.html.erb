@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:thredded_page_title) ? yield(:thredded_page_title) : 'Soulbol Forum' %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'thredded/application', media: 'all' %>
+    <%= stylesheet_link_tag 'thredded_overrides', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'thredded_manifest', defer: true %>
+    <%= javascript_include_tag 'thredded', defer: true %>
+  </head>
+
+  <body class="thredded--application">
+    <header class="thredded--header">
+      <div class="thredded--container">
+        <h1 class="thredded--header-title">
+          <%= link_to 'Soulbol Forum', thredded.root_path %>
+        </h1>
+        <nav class="thredded--navigation">
+          <%= render 'thredded/shared/nav' %>
+        </nav>
+      </div>
+    </header>
+
+    <main class="thredded--main">
+      <div class="thredded--container">
+        <%= render 'thredded/shared/flash_messages' %>
+        <%= yield %>
+      </div>
+    </main>
+
+    <footer class="thredded--footer">
+      <div class="thredded--container">
+        <p>© <%= Time.current.year %> Soulbol. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html> 
