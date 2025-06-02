@@ -13,7 +13,7 @@ gem "jbuilder"
 
 gem "devise", "~> 4.9"
 
-gem 'thredded', '~> 1.1'
+gem 'thredded', '~> 1.2'
 
 gem "html-pipeline"
 
